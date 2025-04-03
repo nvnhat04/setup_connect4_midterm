@@ -49,7 +49,7 @@ Ví dụ: Nếu API trả về `move = 3`, server sẽ đặt quân vào ô tr�
 
 ### Cài đặt thư viện
 ```bash
-pip install fastapi uvicorn pydantic
+pip install -r requirements.txt
 ```
 
 ### File app.py
