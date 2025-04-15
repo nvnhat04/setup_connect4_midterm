@@ -23,7 +23,7 @@ class GameState(BaseModel):
 
 class AIResponse(BaseModel):
     move: int
-
+#nvnhat04
 @app.post("/api/connect4-move")
 async def make_move(game_state: GameState) -> AIResponse:
     try:
@@ -54,7 +54,7 @@ async def make_move(game_state: GameState) -> AIResponse:
         # Determine whose turn it is based on the number of pieces
         player1_pieces = sum(row.count(1) for row in game.board)
         player2_pieces = sum(row.count(2) for row in game.board)
-        current_player = 1 if player1_pieces == player2_pieces else 2
+        current_player = game_state.current_player
         
         print("Current board state:")
         for row in reversed(game.board):
